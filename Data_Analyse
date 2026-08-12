@@ -1,0 +1,312 @@
+# IMPORT LIBRARIES
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+import warnings
+warnings.filterwarnings("ignore")
+
+
+# LOAD THE DATA
+
+sales = pd.read_csv(
+    r""C:\Users\Suthersun\Downloads\sales.csv",
+    
+)
+
+print("Sales dataset loaded successfully!")
+
+
+#DATA INSPECTION
+
+df.head()
+df.info()
+df.describe()
+df.sample()
+df.tail()
+df.nunique()
+df.isnull().sum()
+df.dtypes()
+
+#Remove Unwanted Columns
+
+datasets = [
+    sales,
+    catalog,
+    stores,
+    online,
+    price_history,
+    discounts_history,
+    markdowns,
+    actual_matrix
+]
+
+for df in datasets:
+    if "Unnamed: 0" in df.columns:
+        df.drop("Unnamed: 0", axis=1, inplace=True)
+
+
+Check Duplicate Values
+
+print("Sales duplicates:",
+      sales.duplicated().sum())
+
+    #removing the duplicate 
+sales = sales.drop_duplicates()
+
+print("Stores duplicates:",
+      stores.duplicated().sum())
+
+stores = stores.drop_duplicates()
+
+
+
+
+# Visualize Missing Values
+#For Sales
+
+plt.figure(figsize=(10, 5))
+
+sns.heatmap(
+    sales.isnull(),
+    cbar=False,
+    yticklabels=False
+)
+
+plt.title("Missing Values in Sales Dataset")
+plt.show()
+
+
+# For Catalog
+
+plt.figure(figsize=(10, 5))
+
+sns.heatmap(
+    catalog.isnull(),
+    cbar=False,
+    yticklabels=False
+)
+
+plt.title("Missing Values in Catalog Dataset")
+plt.show()
+
+
+
+
+
+
+# Handle Null Values
+
+sales["date"] = pd.to_datetime(
+    sales["date"],
+    errors="coerce"
+)
+
+sales = sales.sort_values("date")
+
+sales = sales.ffill()
+sales = sales.bfill()
+
+#finally check
+ sales.isnull().sum()
+
+
+# Changing DATA TYPES
+
+
+sales["date"] = pd.to_datetime(
+    sales["date"],
+    errors="coerce"
+)
+
+sales["quantity"] = pd.to_numeric(
+    sales["quantity"],
+    errors="coerce"
+)
+
+sales["price_base"] = pd.to_numeric(
+    sales["price_base"],
+    errors="coerce"
+)
+
+sales["sum_total"] = pd.to_numeric(
+    sales["sum_total"],
+    errors="coerce"
+)
+
+sales["store_id"] = sales["store_id"].astype("category")
+
+# check
+ sales.dtypes()
+
+
+
+
+
+EDA(Exploratory Data Analysis)
+
+sales.describe()
+
+
+# Mean
+print(
+    "Mean Quantity:",
+    sales["quantity"].mean()
+)
+
+print(
+    "Mean Price:",
+    sales["price_base"].mean()
+)
+
+print(
+    "Mean Revenue:",
+    sales["sum_total"].mean()
+)
+
+
+#MEDIAN
+
+print(
+    "Median Quantity:",
+    sales["quantity"].median()
+)
+
+print(
+    "Median Price:",
+    sales["price_base"].median()
+)
+
+print(
+    "Median Revenue:",
+    sales["sum_total"].median()
+
+
+#MODE 
+
+print(
+    "Mode Quantity:",
+    sales["quantity"].mode().iloc[0]
+)
+
+print(
+    "Mode Price:",
+    sales["price_base"].mode().iloc[0]
+)
+
+print(
+    "Mode Revenue:",
+    sales["sum_total"].mode().iloc[0]
+)
+
+
+#STANDARD DEVIATION
+
+print(
+    "Quantity Std:",
+    sales["quantity"].std()
+)
+
+print(
+    "Price Std:",
+    sales["price_base"].std()
+)
+
+print(
+    "Revenue Std:",
+    sales["sum_total"].std()
+
+
+#Outlier Detection Using IQR
+
+Q1 = sales["sum_total"].quantile(0.25)
+
+Q3 = sales["sum_total"].quantile(0.75)
+
+IQR = Q3 - Q1
+
+lower_bound = Q1 - (1.5 * IQR)
+
+upper_bound = Q3 + (1.5 * IQR)
+
+print("Q1:", Q1)
+print("Q3:", Q3)
+print("IQR:", IQR)
+
+print("Lower Bound:", lower_bound)
+print("Upper Bound:", upper_bound)
+
+
+outliers = sales[
+    (sales["sum_total"] < lower_bound) |
+    (sales["sum_total"] > upper_bound)
+]
+
+print(
+    "Number of Outliers:",
+    len(outliers)
+)
+
+
+
+# Correlation Matrix
+correlation = sales[
+    [
+        "quantity",
+        "price_base",
+        "sum_total"
+    ]
+].corr()
+
+print(correlation)
+
+
+
+# Visualise
+
+plt.figure(figsize=(8, 6))
+
+sns.heatmap(
+    correlation,
+    annot=True,
+    cmap="coolwarm",
+    fmt=".2f"
+)
+
+plt.title("Correlation Heatmap")
+
+plt.show()
+
+
+# VISUALISATION
+
+plt.figure(figsize=(10, 6))
+
+sns.histplot(
+    data=sales,
+    x="sum_total",
+    bins=50,
+    kde=True
+)
+
+plt.title("Distribution of Sales Revenue")
+plt.xlabel("Sales Revenue")
+plt.ylabel("Frequency")
+
+plt.tight_layout()
+plt.show()
+
+
+
+# pie chart
+
+store_revenue = (
+    sales
+    .groupby("store_id")["sum_total"]
+    .sum()
+)
+
+
+
