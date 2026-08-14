@@ -1,0 +1,1215 @@
+##age=int(input("enter the age"))
+##if age>18:
+##    print("you r eligible to vote")
+##else:
+##    print("come to age and come for vote")
+##gmails={"ab@gmail":1234, "bbc@gmail":456}
+##gmail=input("enter your gmail:")
+##password=int(input("enter ur password:"))
+##if gmails[gmail]==password:
+##    print("u r logged in")
+##else:
+##    print("enter correct details")
+##name=input("enter ur name:")
+##mark=float(input("enter ur marks:"))
+##if mark>90 and mark<=100:
+##    print(name,mark,"GRADE A")
+##elif mark>80 and mark<=90:
+##    print(name,mark,"GRADE B") 
+##elif mark>70 and mark<=80:
+##    print(name,mark,"GRADE C")
+##else:
+##    print("FAIL")  
+
+##money=float(input("enter ur money:"))
+##if money>90 and money<=100:
+##    print("EAT BRIYANI")
+##elif money>80 and money<=90:
+##    print("EAT DOSA") 
+##elif money>70 and money<=80:
+##    print("DRINK WATER")
+##else:
+##    print("STAY HUNGRY")  
+
+##gmails={"susun2406@gmail.com":1234, "don@gmail.com":5678}
+##gmail=input("enter ur gmail:")
+##if gmail in gmails.keys():
+##    password=int(input("Enter ur password:"))
+##    if gmails[gmail]==password:
+##        print("You r Logged in")
+##    else:
+##        print("Enter ur Correct Password")
+##else:
+##    print("Enter ur correct Gmail")
+
+##experience=float(input("Enter you experience:"))
+##if experience>3:
+##    degree=input("Enter your Degree:")
+##    if degree=="master":
+##        print("You r selected for JOB:")
+##    elif degree=="bachelor":
+##        print("you r waiting listed candidate")
+##    else:
+##        print("you have no education eligible criteria")    
+##else:
+##  print("You are not eligible")
+
+
+##age=int(input("enter ur age"))
+##if age>18:
+##    print("You r eligible for voting")
+##else :
+##    print("Come to age and vote")
+
+##mark=int(input("Enter your marks"))
+##if mark>90 and mark<=100:
+##    print("GRADE A")
+##elif mark>80 and mark<=90:
+##    print("GRADE B")
+##elif mark>70 and mark<=80:
+##    print("GRADE c")
+##elif mark>60 and mark<=70:
+##    print("GRADE D")
+##else:
+##    print("Try to get good marks for GRADE")
+
+##nationality=input("enter the country")
+##if nationality=="INDIAN":
+##    print("you r eligible for next process")
+##    age=int(input("enter your age"))
+##    if age>18:
+##        print("you r eligible for voting")
+##    else:
+##        print(("come to age "))
+##else:
+##    print("you r not indian")
+
+##def add(a,b):
+##    print(a+b)
+##add(2,5)
+
+##def mul(a,b):
+##    return(a*b)
+##print(mul(56,89)+489)
+
+##def even_odd(a):
+##    if a%2==0:
+##        return("hello")
+##    else:
+##        return("bye")
+##i_p=int(input("enter  the A value:"))
+##print(even_odd(i_p))
+
+##def add(a,b):
+##    return(a+b)
+##a=int(input("enter a value:"))
+##b=int(input("enter B value"))
+##print(add(a,b))
+
+##def palind(s):
+##    if s==s[::-1]:
+##        print("palindrome")
+##    else:
+##        print("not an plaindrome")
+##s=(input("enter the value :"))
+##palind(s)
+
+
+
+##def add(a,b):
+##    print(a+b)
+##def sub(a,b):
+##    print(a-b)
+##def mul(a,b):
+##    print(a*b)
+##def div(a,b):
+##    print(a/b)
+##print("Enter the Values")
+##val_1=int(input("Enter A value :"))
+##val_2=int(input("Enter B value :"))
+##print("Enter the operators-->  + , - , * , / ")
+##operator=(input("Enter the operators :"))
+##if operator == "+":
+##    add(val_1,val_2)
+##elif operator == "-":
+##    sub(val_1,val_2)
+##elif operator == "*":
+#    mul(val_1,val_2)
+#elif operator == "/":
+#div(val_1,val_2)
+#else:
+##    print("Enter the correct operator") 
+
+
+    # class Father:  # parent
+#     def land(self):
+#         print('50 acres of  land')
+# class Son(Father):   #child
+#     #land()
+#     def propeties(self):
+#         print('3 bhk house')
+# f=Father()
+# f.land()
+# s.propeties()
+
+
+# multilevel inheritance
+#class wap_1():
+#    def chatting(self):
+##        print("1000 lines of coding for CHATTING")
+#    def status(self):
+ #       print("1000 lines of coding for STATUS")
+#class wap_2(wap_1):
+#    def vdo_call(self):
+#        print("10000 lines of coding for VIDEOCALL")
+#class wap_3(wap_2):
+#    def payment(self):
+#        print("10000 lines of coding for PAYMENT")
+#obj1=wap_1()
+#obj2=wap_2()
+#obj3=wap_3()
+
+
+
+#multiple inheritance
+#class father:
+#    def house(self):
+#        print("4bhk house")
+#class mother:
+#    def car(self):
+#        print("luxury car")
+#class son(father,mother):
+#    def land(self):
+#        print("land 40 acres")
+#obj=son()
+#(obj.house())
+
+
+            ## SINGLE LEVEL INHERITANCE
+##class Father:  # parent
+##    def land(self):
+##        print('50 acres of  land')
+##class Son(Father):   #child
+##    #land()
+##    def propeties(self):
+##        print('3 bhk house')
+##s=Son()
+##s.propeties()
+
+            # MULTILEVEL INHERITANCE
+##class wap_1():
+##    def chatting(self):
+##        print("1000 lines of coding")
+##    def status(self):
+##        print("2000 lines of coding")
+##class wap_2(wap_1):
+##    def vdo_call(self):
+##        print("3000 lines of coding")
+##class wap_3(wap_2):
+##    def meta_search(self):
+##        print("5000 lines of coding")
+##obj=wap_3()
+##obj.status()
+
+
+            ## MULTIPLE INHERITANCE
+##class parent_1():
+##    def method_1(self):
+##        print("This is PARENT_1 CLASS")
+##class parent_2():
+##    def method_2(self):
+##        print("This is PARENT_2 CLASS")
+##class child(parent_1,parent_2):
+##    def method_3(self):
+##        print("This is a CHILD CLASS")
+##obj=child()
+##obj.method_3()
+
+                ## HIERACHICAL INHERITANCE
+##class facebook():
+##    def ai(self):
+##        print("This is an AI Features")
+##class whatsapp(facebook):
+##    def chat(self):
+##        print("This is an CHATTING Feature")
+##class insta(facebook):
+##    def filter(self):
+##        print("This is FILTER Feature")
+##a1=facebook()
+##a1.ai()
+##
+##w1=whatsapp()
+##w1.chat()
+##
+##i1=insta()
+##i1.filter()
+
+##s="suthersun"
+##print(type(len(s)))
+##v="susun"
+##print("s"+"v")
+##print(s + v)
+##lst=[1,2,3,44,5]
+##lst2=[23,34,56]
+##print(lst+lst2)
+
+##lst={1,2,3,4,5,6,7,"susun"}
+##lst2={2,3,4,5,6,7,8,"suther"}
+##print(lst-lst2)
+
+##print(10*2)
+##print('hi'*30)
+##print([1,2,3]*10)
+
+##class student:
+##def pay_bills(self):
+##      print('loan app ,betting')
+##class employee:
+##    def pay_bills(self):
+##        print('credit card ,tax')
+##class manager:
+##    a=10
+##    def pay_bills(self):
+##        global a
+##s1=student()
+##e1=employee()
+##m1=manager()
+##s1.pay_bills()
+##e1.pay_bills()
+##m1.pay_bills()
+
+##class animal():
+##    def sound(self):
+##        print("animal sound")
+##class lion(animal):
+#    def sound(self):
+#        print("ROARING")
+#class tiger(animal):
+#    def sound(self):
+#        print("MUR MUR")
+#class bird(animal):
+#    def sound(self):
+#        print("KIIC KICCCH")
+#a=animal()
+#a.sound()
+#l=lion()
+#l.sound()
+#t=tiger()
+#t.sound()
+#b=bird()
+#b.sound()
+
+
+#class Animal:
+#    def speak(self):
+#3        print("Animal makes a sound")
+
+#class Dog(Animal):
+#    def speak(self):
+#        super().speak()  # Calling the parent class method
+#        print("Dog barks")
+#
+#obj = Dog()
+#obj.speak()
+
+
+#class animal():
+#    def sound(self):
+#        print("THE SOUND OF ")
+#class lion(animal):
+#    def sound(self):
+#        super().sound()
+#        print("LION ROARS")
+#class tiger(animal):
+#    def sound(self):
+#        super().sound()
+#        print("TIGER MURRRR GURRR")
+#class bird(animal):
+#    def sound(self):
+#        super().sound()
+#        print("BIRD sings kokkkooov")
+#b=bird()
+#b.sound()
+#l=lion()
+#t=tiger()
+#print("Enter Characters for various Sounds---> 'B' for bird, 'l' for lion, 't' for tiger")
+#input_value=input("Enter the CHARACTERS :").lower
+#if input_value=="b":
+#    b.sound()
+#elif input_value=="l":
+#    l.sound()
+#elif input_value=="t":
+#   t.sound()
+#else:
+# print("choose correct character")
+
+
+            #ABSTRACTION
+
+#from abc import ABC,abstractmethod
+#class sample(ABC):
+#    @abstractmethod
+#   def ai(self):
+#        pass
+#    @abstractmethod
+#    def vdo_call(self):
+#        pass
+#    @abstractmethod
+#    def voice_call(self):
+#        pass
+#    def chatting(self):
+#        print("10000 codes of chatting")
+#class instagram(sample):
+#    def ai(self):
+#        print("20000 lines of coding")
+#    def vdo_call(self):
+#        print("30000 lines of coding")
+#    def voice_call(self):
+#        print("40000 lines of coding")
+#i=instagram()
+#i.ai()
+
+                # OVERRIDE
+
+# class whatsapp_v1:
+#     def chat(self):
+#         print('chatting ,payment')    #30000
+# # location
+# #contacts
+# class whatsapp_v2(whatsapp_v1):
+#     # chat
+#     def chat(self):   #  lcation contacts
+#         print('location,contacts')
+#         super().chat()   #chatting payment
+#
+# w2=whatsapp_v2()
+# w2.chat()
+
+
+
+
+#class insta_1:
+#    def chat(self):
+#        print('chatting , voice_call')
+#class insta_2(insta_1):
+#    def chat(self):
+#       print('location,videocall')
+#        super().chat()
+#obj=insta_2()
+#obj.chat()
+
+##                    ENCAPSULATION
+
+
+# class Sample:
+#   def __init__(self,name,age):
+#       self.name=name
+#       self.age=age
+# s1=Sample('dinga',23)
+# print(s1.name)
+# print(s1.age)
+
+
+#class sample:
+#    def __init__(self,name,age):
+#        self.name=name
+#        self.age=age
+#obj=sample("susun",24)
+# print(obj.name)
+#print(obj.age)
+
+
+#class Demo(sample):
+#    def add(self):
+#        print(sample.name)
+#d1=Demo()
+#d1.add()-------------------------------------- DOUBT(ERROR)
+
+#class demo():
+#    def __init__(self,name,age):
+#        self._name=name
+#        self._age=age
+#obj_1=demo("susun",24)
+#obj_2=demo("suthersun",26)
+#print(obj_1._name)
+#print(obj_2._age)
+
+
+##class demo:
+ #   def __init__(self,name,age):
+ #       self.__name=name
+ #       self.__age=age
+#obj_1=demo("suthersun",24)
+#obj_2=demo("susun",25)
+#print(obj_1.__name)
+#print(obj_2.__age)--------------------(attributes have no value)
+
+
+#lst=[1,2,3,4,5,6,7,8,9]
+#res =[]
+#for i in lst:
+#    if i %2==0:
+#        res.append(i**2)
+#print(res)
+
+
+                # WHILE LOOP
+#i=0
+#while i<=8:
+#    print(i)
+#    i+=1
+
+
+#i=0
+#n=8
+#while i<=10:
+#   print(i*n)
+#    i+=1
+
+            # table
+
+#i=1
+#table=int(input("enter the number "))
+#while i<=10:
+#    print(f"{i}*{table}={i*table}")        # alter method.....................## print(i,"*",table,"+",i*table)
+#    i+=1
+
+
+                #fibanocci series
+#a=0
+#b=1
+#n=int(input("enter the number :"))
+#while a<n:
+#    a,b=b, a+b
+#    print(a,end=" ")
+
+      
+      # NESTED WHILE loop(inside while loop another while loop)
+
+'''i=1
+while i<=10:
+    j=1
+    while j<=10:
+        print(f"{j}*{i}= {i*j}")
+        j+=1
+    i=i+1
+    print("\n")'''
+ 
+ ## break and continue(break is used to stop the loop statemnet  until its tends to stops due to an error (i.e) it helps to run the program until the previous wrong step
+"""
+n=int(input("enter the value of n:"))
+i=0
+while i<n:
+    i=i+1
+    if i%2==0:
+        continue
+    print(i)      
+    
+    n=int(input("enter the value of n:"))
+i=0
+while i<n:
+    i=i+1
+    if i%2==0:
+        break
+    print(i)  """
+
+
+'''while True:
+        p=int("\nMenu") 
+        p=int("1. MEALS")
+        p=int("2. DOSA")
+        p=int("3. ICE-CREAM")
+        p=int("4. Exit")
+    choice=int(input("enter the number"))
+
+photo in phone'''
+
+'''for i in range(0,11):
+    for j in range(0,11):
+        print(f'{j}*{i}={i*j}')
+    print(" ")'''
+
+
+'''class Sample:
+    def __init__(self,name,age):
+        self.name=name  #ox11.name='dinga'    #ox12.name='dingi'
+        self.age=age   #ox11.age=21            # ox12.age=22
+s=Sample('dinga',21)    #(ox11,dinga,21)
+s1=Sample(age=22,name='dingi')  #(ox12,dingi,22)
+print(s.name)'''
+
+            ##PUBLIC ACCESS specifier
+'''class a:
+    def __init__(self,age):
+        self.age=age
+obj_1=a(21)
+print(obj_1.age)
+class b:
+    print(obj_1.age)
+obj_2=b()'''
+
+
+'''class demo_1:
+    def __init__(self,age):
+        self.age=age
+d1=demo_1(25)
+print(d1.age)  
+class demo_2:
+    print(d1.age)
+d2=demo_2()'''
+
+            #   PROTECTED ACCESS SPECIFIER
+
+'''class A:
+    def __init__(self,name):
+        self._name=name
+obj_1=A("susun")
+print(obj_1._name)
+class B:
+    print(obj_1._name)
+obj_2=B()'''
+        
+            #  PRIVATE ACCESS SPECIFIER
+
+'''class sample_A:
+    def __init__(self,age):
+        self.__age=age
+obj_1=sample_A(99)
+obj_1.__age()
+class sample_B:
+    print(obj_1.__age)
+obj_2=sample_B()'''
+
+
+'''class a:
+    def __init__(self,age):
+        self.__age=age
+q1=a(21)
+print(q1.__age)
+class b:
+    print(q1.__age)
+q2=b()'''
+
+
+#-------------->>>>>  { 1 PUBLIC + 1 PRIVATE ACCESS SPECIFIER }
+
+'''class A:
+    def __init__(self,name,age):
+        self.name=name
+        self._age=age
+obj_A=A("susun",36)
+print(obj_A.name)
+obj_A._age
+class B:
+    print(obj_A._age)
+obj_2=B() '''
+
+'''class Bank:
+    def __init__(self,name,atmpin):
+        self.name=name
+        self.__atmpin=atmpin  #1233
+    def get_atmpin(self):
+        return self.__atmpin   #ox11.__atmpin
+    def set_atmpin(self,newpin):
+        self.__atmpin=newpin  #2344
+b=Bank('dinga',1233)   #(ox11,dinga,1233)
+c=Bank('dingi',2345)'''
+
+'''class bank:
+    def __init__(self,name,atmpin):
+        self.__atmpin=atmpin
+    def get_atmpin(self):
+        return self.__atmpin
+    def  set_atmpin(self,newpin):
+        self.__atmpin=newpin
+obj_1=bank("dinga",1234)
+print(obj_1.set_atmpin)'''
+
+
+                ## CREATION OF USERNAME FOR BANK DETAILS
+
+'''dic={}
+inp_user=input("Enter the USER Name :")
+if inp_user=="SUSUN":
+    inp_psw=input("Enter USER Password :")
+if inp_user=="SUSUN" and inp_psw=="1234":
+        atmpin=input("Enter ur New ATM Pin :")
+        dic[inp_user]=atmpin
+else :
+    print("wrong user")'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            ## setting atm pin or seeing atm pin by SET & GET
+
+
+'''class bank:
+    def __init__(self,name,atmpin):
+        self.name=name
+        self.__atmpin=atmpin
+    def get_atmpin(self):
+        return self.__atmpin
+    def set_atmpin(self,newpin):
+        self.__atmpin=newpin
+a=bank("susun",1234)
+print("Enter the value :>  1 - GET ATM PIN  2 - SET NEW ATM PIN")
+u_i=int(input("Enter the Number:"))
+if u_i==1:
+    password=(input("enter the password:"))
+    if password=="susun123":
+        print(a.set_atmpin)
+    else:
+        print("error")
+elif u_i==2:
+    pin=int(input("enter the atm pin"))
+    if pin=="1234":
+        new_atmpin=input("Enter the NEW ATMPIN :")
+        a.set_atmpin(new_atmpin)   
+    print(a.set_atmpin) 
+else:
+    ("CREATE AN ACCOUNT FIRST")'''
+
+
+
+
+'''class Bank:
+    def __init__(self,name,atmpin):
+        self.name=name
+        self.__atmpin=atmpin  #1233
+    def get_atmpin(self):
+        return self.__atmpin   #ox11.__atmpin
+    def set_atmpin(self,newpin):
+        self.__atmpin=newpin  #2344
+b=Bank('dinga',1233)   #(ox11,dinga,1233)
+c=Bank('dingi',2345)
+print('select one option : 1.to show atmpin   2. to update atmpin')
+u_i=int(input('enter the option :'))
+if u_i==1:
+    password= input('enter the password')
+    if password=='dinga123':
+        print(b.get_atmpin())
+    else:
+        print('error')
+elif u_i==2:
+    pin=int(input('enter the pin'))
+    if pin ==1233:
+        new_pin=int(input('enter the new pin'))
+        b.set_atmpin(new_pin)
+        print(b.get_atmpin())'''
+
+
+## wap 1 to 10 numbers
+'''i=1
+while i<=10:
+    print(i)
+    i+=1'''
+
+## wap 10 to 1 numbers
+'''i=10
+while i>=1:
+    print(i)
+    i-=1'''
+
+##wap to traverse through a string 
+'''s=input("Enter :")
+i=0
+while i<len(s):
+    print(s[i])
+    i+=2'''
+
+# wap to print even numbers present in a list
+'''lst=[1,2,3,4,5,6,7,8,9,10]
+i=0
+while i<len(lst):
+    if lst[i]%2==0:
+        print(lst[i],end=" ") 
+    else:
+        print()
+        print(lst[i],end=" ")
+    i+=1'''
+
+#wap to create  a new list from an existing list
+'''lst=[1,2,3,4,5,6,7,8,9,10]
+res=[]
+i=0
+while i<len(lst):
+    res.append(lst[i])
+    i+=1
+print(res)'''
+
+
+
+
+
+#wap to create a list from a old list  if the number is even do square and add
+# else cube and add
+'''lst=[1,2,3,4,5,6,7,8,9,10]
+res=[]
+i=0
+while i<len(lst):
+    if lst[i]%2==0:
+        res.append(lst[i]**2)
+    else:
+     res.append(lst[i]**3)
+    i+=1
+    print(res)'''
+
+
+
+# wap to print even numbers present in a list
+'''lst=[1,2,3,4,5,6,7,8,9,10]
+# #    0 1 2 3 4 5 6 7 8 9
+a=0
+while a<len(lst):  #0 1 2 3 4 5 6 7 8 9
+    if lst[a]%2==0:  # 1%2==0
+        print(lst[a])
+    else:
+        print(lst[a], end=" ")
+    a+=1'''
+
+#wap to traverse through a string 
+'''s=input("enter the character: ")
+i=0
+while i<len(s):
+    print(s[i])
+    i+=1'''
+
+
+#wap to traverse through a string 
+'''lst=[1,2,3,4,5,6,7,8]
+res=[55]
+i=0
+while i<len(lst):
+    res.append(lst[i])
+    i+=1
+print(res)'''
+
+
+
+     #ADDING AN ELEMENT INTO LIST
+'''lst=[1,2,3,4,5,6,7,8,9,10]
+lst.append(20)
+print(lst)'''
+
+    #ADDING AN ELEMENT INTO EACH ELEMENT ON LIST(ex: 20 is being added to each index)
+'''lst=[1,2,3,4,5,6,7,8,9,100]
+i=0
+while i<10:       #-----------------> Here why 10? why we should not put len(lst)?
+    lst.append(lst[i]+20)
+    i+=1
+print(lst)'''
+
+# FUNCTIONS
+'''def add(a,b):
+    print(a+b)
+a=int(input("enter a value :"))
+b=int(input("enter b value :"))
+add(a,b)'''
+
+# FUNCTIONS using RETURN statement
+'''def add(a,b):
+    return(a+b)
+a=int(input("enter a value :"))
+b=int(input("enter b value :"))
+print(add(a,b)+50000)'''
+
+#waf to print hello if the given number is even else print bye 
+'''def even(a):
+    if a%2==0:
+        print("hello")
+    else:
+        print("bye")
+i_p=int(input("enter value :"))
+even(i_p)'''
+
+
+#waf to check given string is palindrome or not 
+'''def palindrome(p):
+    if p==p[::-1]:
+        print("PALINDROME")
+    else:
+        print("Not Palindrome")
+i_p=input("Enter the string :")
+palindrome(i_p)'''
+
+
+#waf to create a calculator
+# add  sub   mul   floor division   true division modules
+#ask user to enter 2 values along with ask the operator 
+'''def add(a,b):
+    print(a+b)
+def sub(a,b):
+    print(a-b)
+def mul(a,b):
+    print(a*b)
+def div(a,b):
+    print(a/b)
+def exp(a,b):
+    print(a**b)
+v1=int(input("Enter A value :"))
+v2=int(input("Enter B value :"))
+print("ENTER THE OPERATORS---->  + , - , * , / , ** ")
+operator=input("Enter the operator :")
+if operator=="+":
+    (add(v1,v2))
+elif operator=="-":
+    (sub(v1,v2))
+elif operator=="*":
+    (mul(v1,v2))
+elif operator=="/":
+    (div(v1,v2))
+elif operator=="**":
+    (exp(v1,v2))
+else:
+    print("Enter the Correct Operator")'''
+
+
+
+
+### BANK ACCOUNT PROCESSING WITH 1). AMT DEPOSIT  2). WITHDRAWL  3). CHECK BALANCE
+
+'''name_password={'dinga':1234,'dingi':4567}
+name_amount={'dinga':1000,'dingi':500}
+username=input("Enter USERNAME :")
+userpassword=int(input("Enter PASSWORD :"))
+if username=="dinga" and userpassword==1234:
+    print("Welcome to the Bank ---->  1) Amt Deposit  2) Amt Withdrawl  3) Balance Check :")
+    ip=int(input("Enter the VALUE :"))
+    if ip==1:
+        print("Amount Deposit")
+        a_d=int(input("Enter the AMOUNT for DEPOSIT :"))
+        name_amount["dinga"]=name_amount["dinga"]+a_d
+        print(name_amount)
+    elif ip==2:
+        print("Amount Withdrawl")
+        a_w=int(input("Enter the AMOUNT for WITHDRAWL"))
+        if a_w<name_amount["dinga"]:
+            name_amount["dinga"]=name_amount["dinga"]-a_w
+            print(name_amount)
+        else:
+            print("Insufficient AMOUNT")
+
+    elif ip==3:
+        print("Balance check")
+        print(name_amount)
+    else:
+        print("Invalid")
+else:
+    print("INVALID USER")'''
+
+##PRINTING / FORMATTING A STRING
+'''a=int(input("ENTER A : "))
+b=int(input("ENTER B :"))
+print('You got the output as',a*b)
+print(f'you got the output as {a*b}')'''
+
+
+'''a=int(input("a value :"))
+if a%2==0:
+    print(f'{a} is an even number')
+else:
+    print(f'{a} is an odd number')'''
+
+'''for i in range(5):
+    for j in range(5):
+        print((i,j),end=" ")
+    print()'''
+
+
+
+                    # PATTERNS
+'''  * * * * *
+     *       *
+     *       *
+     *       *
+     * * * * *    '''       
+
+'''for i in range(5):
+    for j in range(5):
+        if i==0 or j==0 or i==4 or j==4:
+            print("*",end=" ")                  #
+        else:
+            print(" ",end=" ")
+    print()'''
+
+
+'''for i in range(5):
+    for j in range(5):
+        print((i,j), end=" ") 
+    print()'''
+
+'''for i in range(5):      ##---------------------- 0 to 4
+    for j in range(5):  ##------------------- 0 to 4
+      print((i,j),end="  ")
+    print()'''
+
+
+'''        *     
+           *
+       * * * * *
+           *
+           *        '''
+
+'''n=int(input("Enter the VALUE :"))
+for i in range(n):
+    for j in range(n):
+        if i==n//2 or j==n//2:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()'''
+
+
+
+'''   *       * 
+        *   *
+          *
+        *   *
+      *       *     '''
+
+'''
+n=int(input("Enter the Value :"))
+for i in range(n):
+    for j in range(n):
+        if i==j or i+j==n-1:
+            print("*", end=" ")
+        else:
+            print(" ",end=" ")
+    print() '''
+
+
+'''     * * * * * * * * * * * 
+        * *               * * 
+        *   *           *   * 
+        *     *       *     * 
+        *       *   *       * 
+        *         *         * 
+        *       *   *       * 
+        *     *       *     * 
+        *   *           *   * 
+        * *               * * 
+        * * * * * * * * * * *       '''
+
+'''n=int(input("enter the number"))
+for i in range(n):
+    for j in range(n):
+        if i==0 or j==0 or i==n-1 or j==n-1 or i==j or i+j==n-1:
+            print("*", end=" ")
+        else:
+            print(" ",end=" ")
+    print()'''
+
+
+
+'''     * * * * 
+        *
+        *
+        *
+          * * * *           
+
+
+
+
+for i in range(5):
+    for j in range(5):
+        if i==0 and j!=0 or i==5-1 and j!=0 or j==0 and i!=0 and i!=5-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print() '''
+
+
+
+
+
+# Type of ARGUEMENTS positional, keyword,variable length, kwargs,default arguements
+##POSITIONAL Arguement---->
+'''def user_info(email,username):
+    print(f"username: {username}")
+    print(f"EMAIL : {email}")
+user_info("susun","susun24@gmail.com") #--- positions of this mail to username and "susun24@gmail.com  to email'''
+
+#KEYWORD ARGUEMENT
+#give parameter values 
+# from database user_info we will assign user_info(username="susun",emai="susun24@gmail.com")
+
+    
+
+
+'''def user_info(email,username):
+    print(f"username: {username}")
+    print(f"EMAIL : {email}")
+
+user_info(username="susun",emai="susun24@gmail.com")
+
+def area_of_rectangle(length,width):
+    return length*width
+area_of_rectangle(length=2,width=6)'''
+
+
+#variable length
+#if we give *, we can specify n number of positonal parameters
+# if we know sequncee(datastructure) or value we use FOR LOOP
+#stored as  tuple
+'''def sum(*values):
+    sum=0
+    for i in values:
+        sum=sum+i
+    return sum
+print(sum(1,2,3,4,5))'''
+
+
+'''def student(schoolname,grade,*args):
+   for i in args:
+      print(f"{i} studying in{schoolname} at grade {grade}")
+student('psy',3,'ram','suresh','ramesh')'''
+
+#kwargs
+#we pass in keyword arguements
+'''def  func(**kwargs):
+    print("EMPLOYEE DETAILS")
+    print(f"NAME : {kwargs["name"]}")
+    print(f"AGE : {kwargs["age"]}")
+    print(f"PLACE : {kwargs["place"]}")
+    print(f"ROLE : {kwargs["role"]}")
+func(name="susun",age=25,place="chennai",role="software developer")'''
+
+#ascending
+#lst=[1,27,9,3,4,5]
+#print(sorted(lst))
+
+#DESCENDING
+'''lst=[1,27,9,3,4,5]
+print(sorted(lst,reverse=True))'''
+
+
+
+'''def handle_request(**dict):
+    if "action" in dict:
+        print(f"permoing action : {dict["action"]}")
+    else:
+        print("no action specified")
+        for key,value in dict.items():
+            print(f"{key}:{value}")
+
+handle_request(action="delete",item="file.text",user="admin")'''
+
+
+#DEFAULT ARGUEMENT/PARAMETER
+'''def sum(a=3,b=10):
+    c=a+b 
+    return c
+print(sum(a=30,b=10))'''
+
+
+#### (shift+tab) it shiws all the parameters
+'''list=[1,4,5,2,3]
+print(sorted(list))'''
+
+
+
+# self implies objects inside
+#By using SELF, parameters can be used in any functions
+
+
+ 
+'''class car:
+    def engine(self,name,max_speed,fuel_type):
+        self.name=name
+        self.speed=max_speed
+        self.fuel=fuel_type
+    def print(self):
+        print("Type of CAR:",self.name,"SPEED of Car",self.speed,"Fuel_type",self.fuel)
+car_1=car()
+car_1.name("AUDI")
+car_1.speed(500)
+car_1.fuel=("DIESEL")'''
+
+
+# CONSTRUCTOR
+## __init__ is an instance method in a class that is automativally called whenever new object for class is created
+## pass the parameters of constructor inside the CLASS
+
+'''class student:
+    def __init__(self,name,age,*grades):
+        self.name=name
+        self.age=age
+        self.grades=grades
+        print(name)
+    def calculate_average(self):
+        average=sum(self.grades)/len(self.grades)
+        print(f"{self.name}'s average grade is : {average: .2f}")
+    def display_info(self):
+        print(f"Name : {self.name}")
+        print(f"Age : {self.age}")
+        print(f"Average : {self.calculate_average()}")
+
+detail=student("DHONI ",23,88,90,78,90)
+detail.calculate_average()
+detail.display_info()'''
+
+
+'''
+import datetime as dt
+import time
+class library:
+    def __init__(self):
+        self.name=["story","horror","science","arts"]
+    def add_books(self):
+        self.add_book=input("Enter the NAME of BOOK :")
+        self.name.append(self.add_book)
+        print(f"The BOOK{self.add_book}was added successfully on{dt.date.today()}")
+    def borrow_book(self):
+        your_name=input("Enter the your NAME :")
+        self.take_book=input("Enter the Book Name :")
+        if self.take_book in self.name:
+            self.name.remove(self.take_book)
+            print(f"book {self.take_book} borrowed by {your_name}at {dt.date.today}")
+        else:
+            print("It seems that the Book u entered is not available")
+    def availabe_books(self):
+        if self.name:
+            for i in self.name:
+                print(i)
+            print("\n")
+        else:
+            print("There is no BOOKS")
+    def return_books(self):
+        self.add_=input("Enter the BOOK Name :")
+        self.name.append(self.add_)
+        print(f"Book {self.add_} is returned successfully")
+def main():
+    object1=library()
+    while True:
+        print("Library Management System")
+        print("Enter 1 to check AVAILABLE BOOKS")
+        print("Enter 2 to BORROW BOOKS")
+        print("Enter 3 to RETURN BOOKS")
+        print("Enter 4 to ADD NEW BOOKS")
+        print("Enter 5 to EXIT")
+        print("\n")
+        a=int(input("Enter the CHOICE :"))
+        if a==1:
+            object1.availabe_books()
+        elif a==2:
+            object1.borrow_book()
+        elif a==3:
+            object1.return_books()
+        elif a==4:
+            object1.add_books()
+        elif a==5:
+            print("Thank YOU...! Visit Again !!!!")
+        else:
+            print("INVALID ENTRY... TRY AGAIN!")
+main()

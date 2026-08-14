@@ -1,2 +1,0 @@
-# APPLICATION-1
-This is my First APPLICATION
