@@ -1,0 +1,408 @@
+                #LIBRARY -----> NUMPY
+'''
+pip install numpy
+import numpy as np
+import sys
+import time
+a=np.array([1,2,3.2,4,5,6])
+b=np.array([3,4,5,2,1,8])
+a+b
+a2=np.array([[1,2,3],
+             [4,5,6]])
+b2=np.array([[2,3],[3,2]])
+print(a2.ndim)
+
+import numpy as np
+import sys
+import time
+a=np.array([1,2,3,4,5,6])
+print("Maximum value in the ARRAY",a.max())'''
+
+# PANDA - it is an library whose purpose is to provide 2 datastructure--- one is SERIES(one dimensional array object- consists only values and index) and another is DATA FRAME(2 dimensional array object-rows and coloumns)
+# used to data manipulation
+'''
+import pandas as pd
+import numpy as np
+list1=["Python","Math","Data","Science","ML"]
+series=pd.Series(list1)
+series
+''' 
+# DATA FRAME has INDEX---> 
+''' 
+    "read_excel" is used to read excel file
+    downloaded file (i.e) download the superset excel file and copy the file path to the read_excel(r'filepath_link')
+    why r--? its used to read the file path
+
+    * ) df1=pd.read_excel(r"C:\Users\Suthersun\Downloads\Sample - Superstore.xlsx")
+
+    * ) import pandas as pd
+import numpy as np
+scores={
+    "Students_name":["suresh","dharshan","mughil","harish","dharshini","shalini"],
+    "Math":[78,56,98,45,87,65],
+    "Chemistry":[67,57,98,65,70,86],
+    "Physics":[78,98,80,76,80,88],
+    "English":[67,78,98,56,67,78]
+}
+data_frame=pd.DataFrame(scores)
+data_frame
+
+
+DATA INSPECTION ---> very important step whle using ML( it is the basic properties)
+--->it will return the coloumn name
+
+list- multiple datatypes can be stored in 1 list and numpy- allows only 1 datatype
+data cleaning - clean the error 
+
+
+in data inspection there are several functions-------
+1) columns - to show how much number of coloumns are present
+2) describe()- is used to return the descriptive statistics(why we use descriptive?-- used to know descriptive values (why? to know basic informations/analysis/properties (i.e) whether the datas taken are correct are not?,,,,,--std deviation - to show how the average values are dispersion from the mean value(show the amount ofmeasue of dispersion/distance)
+        ex--> df.describe(include="object") #default we need to give parameter/value
+
+3) info() - to show the information of datas(like null, non null, object,integers)
+4) value_counts()- used to return the frequency of value points
+5) nunique()
+'''  
+
+'''
+        DATA MANIPULATION
+df.head()- defaultly shows first 5 rows
+df.tail()
+df.sample()-random samples(it will give values of random index)
+df.coloumn- it will shows all the values of coloumn
+df[]- output of only one coloumn(slice)
+df[[","]]-output of two/multiple coloumns(array)
+df[" "].max()- to show maxm value
+df[" "].min()- to show min value
+df[" "].mean()- to show mean value
+df[df[" "]==" "]- to show inside array/coloumn we extract particular object from an coloumn
+accessing only few coloumns---> df[["batsmanName","6s","runs","battingPos","teamInnings"]][df["batsmanName"]=="ShivamDube"]
+applying multiple comditions---> dff[["teamInnings","match","batsmanName","runs"]][(dff["runs"]>60)&(dff["batsmanName"]=="ShivamDube")]
+dff.set_index("match_id")-- make coloumns id as index
+dff.reset_index(drop=True)
+groupby- to group the person by values/sums--> dff.groupby("batsmanName")["runs"].sum()
+TOP 5 groupby- to group the person by values/sums---> dff.groupby("batsmanName")["runs"].sum().nlargest(5)
+Groupby ---> values based on 2 coloumns
+DROP unwanted coloumns--> dff.drop("match_id",axis=1){where defaultly axis will be 0 so change to 1 which is coloumn}
+dff.drop("match_id",axis=1) - coloumns are dropped temporarily ,,,,, 
+---> for permanent deletion we use inplace=True [dff.drop("match_id",axis=1,inplace=True) ]
+dff.drop("match","teamInnings"],axis="columns"or axis=1,inplace=True)--> DROP for multiple coloumn
+axis = 1/coloumn --> if we want to drop it in coloumn wenuse axis=coloumn, orelse defaultly it will go through on index(ie- X axis(0))
+
+
+de["out/not_out"]=de["out/not_out"].replace({"out":0, "not_out":1})
+de.head() 
+REPLACE- regular function, if value is there it will replace or else it wont replace anything, additional functionality
+
+de["out/not_out"]=de["out/not_out"].map({"out":0, "not_out":1})
+de.head()
+MAP- if particular value is present it will replace, if particular value is not present it will return NaN value.
+
+
+
+df[coloumn_name].value_counts()--> df[smoker].value_counts()
+df.select_dtypes(include="object")
+df.select_dtypes(include="object").columns # it extracts colounmn name of dataframes
+
+
+
+#DATA PREPROCESSING
+1) remove unwanted colouns
+2) handling null values -- techniques to handle null values-- dropna and fillna
+3)Duplication
+ to find duplicate---> df.duplicated().sum()
+ to remove duplicate---> df.drop_duplicates(inplace=True)
+ (shift+tab)- to show functions
+4)converting Data Types
+ df[coloumn]=df[coloumn].apply(int) ## where int is an function
+5)Finally we will get an clean DATA
+
+
+
+'''
+'''
+# CLEANING DATA
+
+1) drop wnwanted columns in data { function : drop[]}
+2) Handling NULL VALUE (2 Techniques are there to remove null values - dropNA(), fillNA() these r functions )
+fillna()- 2 methods --> f fill(forward fill{(before the null value which value is present would be printed)}) and b fill(backward value(after null value would be printed))
+
+##HANDLING NULL VALUES
+To remove WARNING MESSAGE : we use function calles 
+  ----->from warnings import simplefilter
+  from warnings import simplefilter
+simplefilter(action="ignore")
+
+# DROPNA
+df=df.dropna() --> used to drop the null values in the DATAFRAME
+
+# FILLNA
+df["latest_customer_review"].fillna(value="Not Available",inplace=True) #values
+df["latest_customer_review"].fillna(method="ffill",inplace=True) #method
+df["latest_customer_review"].fillna(method="bfill",inplace=True) #method
+
+
+
+## HANDLING DUPLICATES
+# check for duplicates
+print(f"number of duplicates rows: {df.duplicated().sum()}")
+
+
+
+#drop duplicates
+df=df.drop_duplicates()
+
+
+## CHANGING DATATYPES
+# to_datetime
+df['date']=pd.to_datetime(df['date'],format='mixed']
+
+# changing to float,integer
+df["column_name"]=df["column_name"].astype(integer,float)
+(if more columns are present then use for loop)
+for i in df.column_name:
+ if i in["column_name1,column_name2,column_name3"]
+ df[i]=df[i].astype(int)
+
+replace() 
+df.replace({"column_name":" " }, " " , regex=True, inplace=True)
+
+what is regular expression?---> It is an pattern matching tool(extracting the particular kind of datas ex- extraction only letters or digits or special characters)
+
+
+
+
+## To take AVERAGE
+--> we need to split the value
+---> symbol is -
+
+
+
+
+select_dtypes() - is used to categorize the object,integer  
+
+
+'''
+
+## EXPLORATORY DATA ANALYSIS -(exploring the data, understanding the datas) 
+'''
+--> Analysing the datasets and summarising it by visual methods and statistics
+It helps in 
+   *) Understand Data Distribution                   --> doubt????? why we put df.column?? 
+   *) finding outliers
+   *) finding patterns,correlations and relationships
+   *)handle missing or duplicate values 
+   *) prepare modelling
+
+
+3 TYPES OF ANALYSIS
+-->  UNIVARIATE ANALYSIS    - HISTOGRAMS, BOXPLOTS, VALUECOUNTS
+-->  BIVARIATE ANALYSIS     - SCATTERPLOTS, CORRELATION, GROUP COMPARISON 
+-->  MULTIVARIATE ANALYSIS  - MATPLOT, SEABORN , PLOTLY
+
+
+
+matplot - customize options
+seaborn - its very easy to use , it have charts
+
+UNIVARIATE ANALYSIS
+    --> Analysis performed on SINGLE/1 column
+    -->    ##  UNIVARIATE ANALYSIS
+    --> single variable 
+    -->summarize and describe
+    -->Distribution(normal, binomial,exponential distribution of datas), Central Tendency and Variablity
+    Normal Distribution - Most values are ABOVE AVERAGE and Very FEW are very LOW values
+    Binomial Distribution -only 2 values of outcomes (YES/ NO),(True/False)
+    Exponential Distribution - How long will wait for things to Happen(surely it will happen but it takes some times)
+    -->variance= (std.deiation)^2    
+
+HISTOGRAM is defined as "TO KNOW THE DISTRIBUTION OF THE VALUE"
+  distribution of single variable datas and grouping those data into bins 
+
+  
+
+
+  xlabel - values print in x axis
+  ylabel - values print in y axis
+  
+IQR - INTER QUARTILE RELATION
+LOWER BOUND & UPPER BOUND is used to remove the values
+
+histogram
+it returns distribution
+
+
+VIOLIN PLOT
+it returns histogram and box plot
+it also finds outer layers
+
+violin is present in seaborn lib as well as matplotlib
+
+#count plot
+counting the frequency of datapoint
+it is similar to histogram
+
+
+plt.figure - it will print figure based on size we give
+
+'''
+
+
+
+
+
+                    ## STATISTICS and Probability
+''' 
+# SCIPY LIBRARY
+  - SciPy is an open-source Python library used for scientific and technical computing.
+  - It builds on top of NumPy, extending its functionality and providing additional functionality for complex mathematical, statistical, optimization tasks.
+
+Difference between NUMPY & SCIPY LIBRARY
+ -> NumPy provides basic array operations and mathematical functions.
+ -> SciPy builds on top of NumPy and offers advanced algorithms and additional functionality for scientific computing.
+
+
+
+What is STATISTICS?
+Staistics is an "FOUNDATION OF DATASCIENCE"
+It is an branch of mathematics which deals with data around us.
+
+
+[Core of datascience is  machinelearning and deeplearning which uses algorithms which in turn are based on STATISTICS]
+
+---------------------------------------------------------------------------------
+# 2 TYPES OF STATISTICS
+1- DESCRIPTIVE STATISTICS is used to describe the data or to know the basic properties of data
+   [Where we use the data describtion or understand the prperties of data]
+2 - INFERENTIAL STATISTICS
+   By using the samples we get inference on population
+
+----------------------------------------------------------------------------------
+   # DESCRIPTIVE STATISTICS
+1) VISUALIZATION - histogram, Bar Charts, Piecharts, Boxplots
+2) MEASURE OF CENTRAL TENDANCY
+  * - MEAN     (average)
+  * - MEDIAN   (middle value)
+  * - MODE     (most repeated value frequency)
+
+3) MEASURE OF DISPERSION
+   *) RANGE (Maximum value - Minimum value )
+   *) VARIANCE - (average squared deviation from mean)
+   * STD.DEV (variance)^2 = std deviation
+      - Its is used to measure the dispersion(distance) btwn variables     
+       ex: 2,100,60 - mean would be around 55, to find the dispersion/ distance among these we use std.deviation
+   *) INTERQUARTILE RANGE (IQR=Q3-Q1)
+
+
+STATISTICS
+-Variance - it is measure of distribution
+-Range
+-Standard Deviation amount of dispersion from the MEAN Distance
+-IQR
+
+---------------------------------------------------------------------------------------------------
+
+# INFERENTIAL STATISTICS
+    It involves giving some inference to the population [how? by giving some test to sample]  
+     
+    what is INFERENTIAL STATISTICS?
+    1)- HYPOTHESIS TESTING - theory test[used to decide whether the data sufficiently supports a particular hypothesis]
+        REAL TIME APPLLICATION:Ex: man suffer more from nightmare than women ,Ex: deciding whether hospital carpeting results in more infection-- we have to prove by using hypothesis testing
+        CONDUCTING A TEST: 
+        *) Null Hypothesis(H0) - opposite to my hypothesis[no relation exists between two sets of data/variable]
+        *) Alternate Hypothesis(H1)- opposite to NULL HYPOTHESIS[bcz we r going to prove the alternate hypothesis is true, (or) Evidence against NULL HYPOTHESIS]
+
+    2) AB Testing 
+        AB Testing is defined as SPLIT Testing, where two or more versions of an variable(webpages,page element) are shown of different segments at the same time to determine it
+        example
+        *) Booking.com
+        *) Test A: book now
+        *) Test b: only 2 rooms left with urgencing messaging
+        *) Metric : conversion rate
+        *)bimetric result: evryone will book due to warning of urgency
+        
+
+sampling vs population
+sample is the subset of population which is used to make inference
+sampling is the process to collect some datas to make analysis
+# 2 types of sampling 
+  *) RANDOM SAMPLING- we get sample RANDOMLY from the population where each values should be in equal preference
+  *) STRATIFIED SAMPLING - Equal preference to all groups/columns or process of dividing samples into groups or layers
+
+TYPES OF CHARTS
+PIE CHART, Donut , pyramid,etc..
+
+# CORRELATION relation btwn 2 columns
+3 types of correlation 
+-- positive correlation (when one variable increases, another variable also increases in SAME DIRECTION - LINEAR RELATIONSHIP)
+-- Negative correlation(when one variable increases, another variable decreases)
+-- No Correlation (No relationship between the variables)
+
+
+
+
+
+'''
+
+
+
+'''
+
+T-TEST(used to calculate the mean from sample)
+ group the difference between two Means
+  --> One sample T-Test
+       t_statistics , it is an formula used to perform the t test
+    population_value= what we r going to give such as values
+    p_value is greater than 0.05, then we accept null hypothesis
+scipy library - contains modules , classes to perform statistical operations
+
+
+
+
+
+
+CHI SQUARE TEST
+     It is an statistica hypothesis test used to find relationship between the TWO CATEGORICAL COLUMNS when the sample size are LARGE(used to find relationship between 2 categorical column/variables) why? if the output and input of columns are not present, then its waste to be present of output(categorical column) in it, for that purpose we use CHI SQUARE TEST
+'''
+
+
+
+'''
+supervised - 2 types --- categorical(yes or no, ex:gender) , regression(continous, ex: age)
+
+Independent variable(X) should have 2 dimensional array  (Feature or  Input)
+Dependent variable(Y) can have one or two dimensional array  (Target or Output)
+
+X is the value we make prediction
+Y is the value we are trying to Predict
+
+to find relation btwn x and y is liner regression
+simple linear - 1 m(slope)
+multiple linear - (more than 2 m (i.e) slope) 
+
+
+logistics regression algorithms comes under classification model
+
+
+Linear regression - Regression (predicts continuous values)
+Logistic regression - Classification (predicts categories, like 0 or 1)
+Then WHY logistics regression algorithms comes under classification model?
+  Because logistic regression formula has linear regression formula (i.e - inversely proportional) 
+
+ We can change the Linear Regression model(continous model) into Logistic Regression model(classification model) (example gender & age is classified as 0 & 1) 
+
+linear regression - where the plot intersects on the straight line
+logistics regression - where the plot intersects on the slope line
+
+
+y-test already value present in data
+x-test it gives the value from which it learned
+
+random state? 
+if we are not giving random_state= 42(or some values), it will constantly keep the train or test size = 0.2, as its is... if we didnt give random_state while running program then gradualy increase will be there in train/test size like 0.3,
+'''
+
+'''
+one not encoding -- what datasets can be used? small datasets
+ label encoding process used for large datasets
